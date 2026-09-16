@@ -4,262 +4,1394 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Keerthana P | Data Scientist</title>
+
+    <meta name="description"
+        content="Keerthana P - Data Scientist and Machine Learning Engineer specializing in Machine Learning, NLP, Deep Learning, Azure Databricks and MLOps.">
+
+    <style>
+
+        /* ==============================
+           GLOBAL
+        ============================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                Roboto, Helvetica, Arial, sans-serif;
+
+            background: #f5f7fb;
+            color: #172033;
+            line-height: 1.7;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1150px;
+            margin: auto;
+        }
+
+
+        /* ==============================
+           NAVIGATION
+        ============================== */
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .nav-container {
+            max-width: 1150px;
+            width: 90%;
+            margin: auto;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: 800;
+            color: #2563eb;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 14px;
+            font-weight: 600;
+            color: #475569;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #2563eb;
+        }
+
+
+        /* ==============================
+           HERO
+        ============================== */
+
+        .hero {
+            background:
+                radial-gradient(circle at top right, #dbeafe, transparent 35%),
+                linear-gradient(135deg, #ffffff, #f1f5f9);
+
+            padding: 100px 0 90px;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .badge {
+            display: inline-block;
+
+            background: #dbeafe;
+            color: #1d4ed8;
+
+            padding: 7px 15px;
+            border-radius: 30px;
+
+            font-size: 13px;
+            font-weight: 700;
+
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: clamp(42px, 6vw, 68px);
+            line-height: 1.05;
+            margin-bottom: 15px;
+            color: #0f172a;
+        }
+
+        .hero h2 {
+            font-size: 25px;
+            color: #2563eb;
+            margin-bottom: 22px;
+        }
+
+        .hero p {
+            max-width: 700px;
+            font-size: 17px;
+            color: #64748b;
+            margin-bottom: 30px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 13px 23px;
+            border-radius: 9px;
+            font-weight: 700;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+            background: #2563eb;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #1d4ed8;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            border: 1px solid #cbd5e1;
+            background: white;
+            color: #334155;
+        }
+
+        .btn-secondary:hover {
+            border-color: #2563eb;
+            color: #2563eb;
+        }
+
+
+        /* HERO CARD */
+
+        .profile-card {
+            background: white;
+
+            padding: 35px;
+
+            border-radius: 20px;
+
+            box-shadow:
+                0 20px 50px rgba(15, 23, 42, 0.08);
+
+            border: 1px solid #e2e8f0;
+        }
+
+        .profile-icon {
+            width: 85px;
+            height: 85px;
+
+            border-radius: 50%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: #2563eb;
+            color: white;
+
+            font-size: 32px;
+            font-weight: 800;
+
+            margin-bottom: 20px;
+        }
+
+        .profile-card h3 {
+            font-size: 22px;
+            margin-bottom: 5px;
+        }
+
+        .profile-card p {
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .profile-item {
+            display: flex;
+            gap: 10px;
+            margin: 12px 0;
+
+            font-size: 14px;
+            color: #475569;
+        }
+
+
+        /* ==============================
+           SECTION
+        ============================== */
+
+        section {
+            padding: 90px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 55px;
+        }
+
+        .section-title span {
+            color: #2563eb;
+            font-weight: 800;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .section-title h2 {
+            font-size: 36px;
+            margin-top: 7px;
+            color: #0f172a;
+        }
+
+        .section-title p {
+            max-width: 650px;
+            margin: 10px auto;
+            color: #64748b;
+        }
+
+
+        /* ==============================
+           METRICS
+        ============================== */
+
+        .metrics {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .metric {
+            background: white;
+            padding: 28px;
+
+            border-radius: 15px;
+
+            border: 1px solid #e2e8f0;
+
+            text-align: center;
+
+            transition: 0.3s;
+        }
+
+        .metric:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(15, 23, 42, 0.08);
+        }
+
+        .metric h3 {
+            font-size: 35px;
+            color: #2563eb;
+        }
+
+        .metric p {
+            color: #64748b;
+            font-size: 14px;
+        }
+
+
+        /* ==============================
+           EXPERIENCE
+        ============================== */
+
+        .company {
+            background: white;
+
+            padding: 35px;
+
+            border-radius: 18px;
+
+            border: 1px solid #e2e8f0;
+
+            margin-bottom: 35px;
+
+            box-shadow: 0 8px 25px rgba(15, 23, 42, 0.04);
+        }
+
+        .company-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+
+            margin-bottom: 25px;
+        }
+
+        .company h3 {
+            font-size: 24px;
+            color: #0f172a;
+        }
+
+        .role {
+            color: #2563eb;
+            font-weight: 700;
+        }
+
+        .duration {
+            background: #eff6ff;
+            color: #1d4ed8;
+
+            padding: 7px 13px;
+
+            border-radius: 20px;
+
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+
+        /* ==============================
+           PROJECT CARDS
+        ============================== */
+
+        .project {
+            margin-top: 25px;
+
+            border-left: 4px solid #2563eb;
+
+            padding: 25px 28px;
+
+            background: #f8fafc;
+
+            border-radius: 0 12px 12px 0;
+        }
+
+        .project h4 {
+            font-size: 22px;
+            margin-bottom: 8px;
+            color: #0f172a;
+        }
+
+        .project-meta {
+            font-size: 14px;
+            color: #64748b;
+
+            margin-bottom: 18px;
+        }
+
+        .project h5 {
+            margin-top: 22px;
+            margin-bottom: 8px;
+
+            color: #334155;
+            font-size: 15px;
+        }
+
+        .project ul {
+            padding-left: 20px;
+        }
+
+        .project li {
+            margin: 8px 0;
+            color: #475569;
+        }
+
+
+        /* ==============================
+           SKILLS
+        ============================== */
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .skill-card {
+            background: white;
+
+            padding: 25px;
+
+            border-radius: 15px;
+
+            border: 1px solid #e2e8f0;
+
+            transition: 0.3s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 30px rgba(15, 23, 42, 0.07);
+        }
+
+        .skill-card h3 {
+            color: #2563eb;
+            margin-bottom: 15px;
+            font-size: 17px;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tag {
+            background: #f1f5f9;
+
+            border: 1px solid #e2e8f0;
+
+            padding: 6px 10px;
+
+            border-radius: 6px;
+
+            font-size: 12px;
+            color: #475569;
+        }
+
+
+        /* ==============================
+           EDUCATION
+        ============================== */
+
+        .education-card {
+            max-width: 700px;
+            margin: auto;
+
+            background: white;
+
+            padding: 30px;
+
+            border-radius: 15px;
+
+            border: 1px solid #e2e8f0;
+
+            text-align: center;
+        }
+
+        .education-card h3 {
+            font-size: 22px;
+            margin-bottom: 8px;
+        }
+
+        .education-card p {
+            color: #64748b;
+        }
+
+
+        /* ==============================
+           CONTACT
+        ============================== */
+
+        .contact {
+            background: #0f172a;
+            color: white;
+        }
+
+        .contact .section-title h2 {
+            color: white;
+        }
+
+        .contact .section-title p {
+            color: #94a3b8;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .contact-card {
+            background: #1e293b;
+
+            padding: 25px;
+
+            border-radius: 12px;
+
+            text-align: center;
+        }
+
+        .contact-card h3 {
+            margin-bottom: 8px;
+            color: #93c5fd;
+        }
+
+        .contact-card p {
+            color: #cbd5e1;
+            font-size: 14px;
+        }
+
+
+        /* ==============================
+           FOOTER
+        ============================== */
+
+        footer {
+            background: #020617;
+
+            text-align: center;
+
+            padding: 25px;
+
+            color: #94a3b8;
+
+            font-size: 13px;
+        }
+
+
+        /* ==============================
+           RESPONSIVE
+        ============================== */
+
+        @media (max-width: 900px) {
+
+            .hero-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .metrics {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .skills-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+        @media (max-width: 650px) {
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                padding: 70px 0;
+            }
+
+            section {
+                padding: 60px 0;
+            }
+
+            .metrics {
+                grid-template-columns: 1fr;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .company-header {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                text-align: center;
+            }
+
+        }
+
+    </style>
+
 </head>
+
 
 <body>
 
-    <header>
-        <h1>Keerthana P</h1>
-        <h2>Data Scientist | Machine Learning Engineer</h2>
 
-        <p>
-            Chennai, India |
-            📧 keerthana.palliakal@gmail.com |
-            📱 +91-6382917789
-        </p>
+<!-- ==============================
+     NAVIGATION
+============================== -->
 
-        <p>
-            Data Scientist with 4+ years of experience designing and deploying
-            Machine Learning, Deep Learning, and NLP solutions. Experienced in
-            transforming complex business problems into scalable AI products
-            using Python, TensorFlow, PyTorch, Azure Databricks, MLflow,
-            AWS, and modern MLOps practices.
-        </p>
-    </header>
+<nav>
 
-    <hr>
+    <div class="nav-container">
 
-    <section>
-        <h2>Professional Summary</h2>
+        <div class="logo">
+            KP
+        </div>
 
-        <p>
-            Experienced in the complete Machine Learning lifecycle including
-            business understanding, data collection, exploratory data analysis,
-            feature engineering, model development, evaluation, deployment,
-            monitoring, and optimization.
-        </p>
+        <ul class="nav-links">
 
-        <p>
-            Delivered production-grade solutions across Insurance and Gaming
-            industries, achieving measurable business outcomes such as
-            reducing insurance claim processing time by 40%, improving
-            model accuracy by 15%, and accelerating ML development cycles
-            by 30%.
-        </p>
-    </section>
+            <li>
+                <a href="#about">About</a>
+            </li>
 
-    <hr>
+            <li>
+                <a href="#experience">Experience</a>
+            </li>
 
-    <section>
-        <h2>Professional Experience</h2>
+            <li>
+                <a href="#skills">Skills</a>
+            </li>
 
-        <h3>Galaxy Data Solutions, Chennai</h3>
-        <p><strong>Data Scientist</strong> | August 2022 - Present</p>
+            <li>
+                <a href="#education">Education</a>
+            </li>
 
-        <h3>Project 1: Automated Claims Intelligence & Risk Assessment Engine</h3>
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
 
-        <p>
-            <strong>Client:</strong> Suncorp Group, Brisbane
-            <br>
-            <strong>Role:</strong> Applied Scientist
-            <br>
-            <strong>Duration:</strong> February 2024 - Present
-        </p>
-
-        <h4>Project Overview</h4>
-
-        <p>
-            Led the development of a Deep Learning framework to automate
-            insurance claim triaging and risk assessment. Designed and
-            productionized a Transformer-based solution capable of processing
-            large volumes of unstructured claim descriptions and customer data.
-        </p>
-
-        <h4>Responsibilities</h4>
-
-        <ul>
-            <li>Converted ambiguous business requirements into measurable Machine Learning problems.</li>
-            <li>Designed Python pipelines for transforming claim text and images into model-ready tensors.</li>
-            <li>Performed extensive data cleaning, preprocessing and feature engineering.</li>
-            <li>Developed and optimized Transformer-based BERT models for claim classification.</li>
-            <li>Implemented rigorous A/B testing frameworks with 95% statistical significance validation.</li>
-            <li>Tracked experiments and model versions using MLflow.</li>
-            <li>Collaborated with engineering teams to productionize models.</li>
-            <li>Optimized inference latency for real-time predictions.</li>
-            <li>Researched and adapted state-of-the-art academic papers into business solutions.</li>
         </ul>
 
-        <h4>Business Impact</h4>
+    </div>
 
-        <ul>
-            <li>Reduced claim processing time by 40%.</li>
-            <li>Improved operational efficiency through automation.</li>
-            <li>Enabled real-time claim triaging.</li>
-        </ul>
+</nav>
 
-        <h4>Technologies Used</h4>
 
-        <p>
-            Python, BERT, Transformers, TensorFlow, PyTorch,
-            Azure Databricks, MLflow, SQL, Pandas, NumPy,
-            Scikit-Learn, Git
-        </p>
+<!-- ==============================
+     HERO
+============================== -->
 
-        <hr>
+<header class="hero">
 
-        <h3>Project 2: Predictive Guardrails & Wagering Personalization</h3>
+    <div class="container hero-grid">
 
-        <p>
-            <strong>Client:</strong> Ladbrokes, Brisbane
-            <br>
-            <strong>Role:</strong> Machine Learning Engineer
-            <br>
-            <strong>Duration:</strong> August 2022 - January 2024
-        </p>
+        <div>
 
-        <h4>Project Overview</h4>
+            <span class="badge">
+                AVAILABLE FOR DATA SCIENCE OPPORTUNITIES
+            </span>
 
-        <p>
-            Engineered a high-throughput Machine Learning ecosystem for
-            monitoring more than 1 billion annual transactions, enabling
-            real-time behavioral analysis and personalized user engagement.
-        </p>
+            <h1>
+                Keerthana P
+            </h1>
 
-        <h4>Responsibilities</h4>
+            <h2>
+                Data Scientist | Machine Learning Engineer
+            </h2>
 
-        <ul>
-            <li>Developed reusable Python libraries for feature engineering and model evaluation.</li>
-            <li>Improved ML prototyping speed by 30% through modular framework design.</li>
-            <li>Architected automated ML pipelines using Azure Databricks.</li>
-            <li>Integrated automated hyperparameter tuning workflows.</li>
-            <li>Built scalable feature extraction pipelines for large-scale datasets.</li>
-            <li>Reduced feature processing time by 40%.</li>
-            <li>Implemented Deep Learning models using TensorFlow and PyTorch.</li>
-            <li>Applied gradient clipping and learning rate scheduling techniques.</li>
-            <li>Built testing frameworks including unit tests, bias detection and statistical validation.</li>
-            <li>Collaborated with cross-functional teams to deploy production-ready ML solutions.</li>
-        </ul>
+            <p>
+                Data Scientist with 4+ years of experience designing and
+                deploying Machine Learning, Deep Learning and NLP solutions.
+                Experienced in building scalable AI systems using Python,
+                TensorFlow, PyTorch, Azure Databricks, MLflow and AWS.
+            </p>
 
-        <h4>Business Impact</h4>
+            <div class="hero-buttons">
 
-        <ul>
-            <li>Processed over 1 billion annual transactions.</li>
-            <li>Improved model accuracy by 15%.</li>
-            <li>Reduced processing time by 40%.</li>
-            <li>Accelerated ML development cycles by 30%.</li>
-        </ul>
+                <a
+                    class="btn btn-primary"
+                    href="mailto:keerthana.palliakal@gmail.com">
+                    Contact Me
+                </a>
 
-        <h4>Technologies Used</h4>
+                <a
+                    class="btn btn-secondary"
+                    href="#experience">
+                    View Projects
+                </a>
 
-        <p>
-            Python, TensorFlow, PyTorch, Azure Databricks,
-            MLflow, SQL, Git, Scikit-Learn, Pandas, NumPy
-        </p>
+            </div>
 
-    </section>
+        </div>
 
-    <hr>
 
-    <section>
-        <h2>Technical Skills</h2>
+        <div class="profile-card">
 
-        <h3>Programming</h3>
-        <p>Python, SQL</p>
+            <div class="profile-icon">
+                KP
+            </div>
 
-        <h3>Machine Learning</h3>
-        <p>
-            Regression, Classification, Clustering,
-            Time Series Forecasting, NLP
-        </p>
+            <h3>
+                Data Scientist
+            </h3>
 
-        <h3>Deep Learning</h3>
-        <p>
-            TensorFlow, PyTorch, Transformers,
-            BERT, Neural Networks
-        </p>
+            <p>
+                Machine Learning • Deep Learning • NLP • MLOps
+            </p>
 
-        <h3>Data Analysis</h3>
-        <p>
-            EDA, Hypothesis Testing,
-            Feature Engineering,
-            Business Metric Interpretation
-        </p>
+            <div class="profile-item">
+                📍 Chennai, India
+            </div>
 
-        <h3>MLOps & Deployment</h3>
-        <p>
-            MLflow, Git, GitHub,
-            CI/CD Pipelines,
-            Flask, Streamlit
-        </p>
+            <div class="profile-item">
+                📧 keerthana.palliakal@gmail.com
+            </div>
 
-        <h3>Cloud Platforms</h3>
-        <p>
-            Azure Databricks,
-            AWS S3,
-            AWS SageMaker
-        </p>
+            <div class="profile-item">
+                📱 +91-6382917789
+            </div>
 
-        <h3>Visualization</h3>
-        <p>
-            Power BI, Tableau,
-            Matplotlib, Seaborn,
-            Plotly
-        </p>
-    </section>
+        </div>
 
-    <hr>
+    </div>
 
-    <section>
-        <h2>Education</h2>
+</header>
 
-        <h3>DRBCC Hindu College, Chennai</h3>
 
-        <p>
-            Bachelor of Science (Statistics)
-            <br>
-            Graduated: April 2022
-        </p>
-    </section>
+<!-- ==============================
+     ABOUT
+============================== -->
 
-    <hr>
+<section id="about">
 
-    <section>
-        <h2>Key Achievements</h2>
+    <div class="container">
 
-        <ul>
-            <li>4+ Years of Industry Experience</li>
-            <li>Reduced Insurance Claim Processing Time by 40%</li>
-            <li>Improved Model Accuracy by 15%</li>
-            <li>Accelerated ML Development by 30%</li>
-            <li>Processed 1+ Billion Annual Transactions</li>
-            <li>Productionized Transformer-Based NLP Solutions</li>
-            <li>Built End-to-End Machine Learning Pipelines</li>
-        </ul>
-    </section>
+        <div class="section-title">
 
-    <hr>
+            <span>ABOUT ME</span>
 
-    <section>
-        <h2>Contact Information</h2>
+            <h2>
+                Building ML Solutions That Deliver Business Impact
+            </h2>
 
-        <p>
-            Email:
-            <a href="mailto:keerthana.palliakal@gmail.com">
-                keerthana.palliakal@gmail.com
-            </a>
-        </p>
+            <p>
+                Experienced across the complete Machine Learning lifecycle,
+                from business problem formulation and data preparation to
+                model development, evaluation, deployment and monitoring.
+            </p>
 
-        <p>
-            Phone:
-            +91-6382917789
-        </p>
+        </div>
 
-        <p>
-            Location:
-            Chennai, Tamil Nadu, India
-        </p>
-    </section>
+
+        <div class="metrics">
+
+            <div class="metric">
+
+                <h3>4+</h3>
+
+                <p>
+                    Years Experience
+                </p>
+
+            </div>
+
+
+            <div class="metric">
+
+                <h3>40%</h3>
+
+                <p>
+                    Claim Processing Reduction
+                </p>
+
+            </div>
+
+
+            <div class="metric">
+
+                <h3>15%</h3>
+
+                <p>
+                    Model Accuracy Improvement
+                </p>
+
+            </div>
+
+
+            <div class="metric">
+
+                <h3>1B+</h3>
+
+                <p>
+                    Annual Transactions
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==============================
+     EXPERIENCE
+============================== -->
+
+<section id="experience">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>EXPERIENCE</span>
+
+            <h2>
+                Professional Experience
+            </h2>
+
+            <p>
+                End-to-end Machine Learning experience across Insurance
+                and Gaming domains.
+            </p>
+
+        </div>
+
+
+        <div class="company">
+
+            <div class="company-header">
+
+                <div>
+
+                    <h3>
+                        Galaxy Data Solutions
+                    </h3>
+
+                    <p class="role">
+                        Data Scientist
+                    </p>
+
+                </div>
+
+                <span class="duration">
+                    Aug 2022 - Present
+                </span>
+
+            </div>
+
+
+            <!-- PROJECT 1 -->
+
+            <div class="project">
+
+                <h4>
+                    Automated Claims Intelligence & Risk Assessment Engine
+                </h4>
+
+                <div class="project-meta">
+
+                    <strong>Client:</strong>
+                    Suncorp Group, Brisbane
+
+                    &nbsp; | &nbsp;
+
+                    <strong>Role:</strong>
+                    Applied Scientist
+
+                    &nbsp; | &nbsp;
+
+                    <strong>Duration:</strong>
+                    Feb 2024 - Present
+
+                </div>
+
+
+                <h5>
+                    Project Overview
+                </h5>
+
+                <p>
+                    Led the development of a Deep Learning framework to
+                    automate insurance claim triaging and risk assessment.
+                    Designed and productionized a Transformer-based solution
+                    for processing unstructured claim descriptions and
+                    customer information.
+                </p>
+
+
+                <h5>
+                    Key Responsibilities
+                </h5>
+
+                <ul>
+
+                    <li>
+                        Converted ambiguous business requirements into
+                        measurable Machine Learning problems.
+                    </li>
+
+                    <li>
+                        Designed Python pipelines for transforming claim
+                        text and images into model-ready tensors.
+                    </li>
+
+                    <li>
+                        Performed data cleaning, preprocessing and
+                        feature engineering.
+                    </li>
+
+                    <li>
+                        Developed and optimized Transformer-based
+                        BERT models for claim classification.
+                    </li>
+
+                    <li>
+                        Implemented A/B testing frameworks with
+                        95% statistical significance validation.
+                    </li>
+
+                    <li>
+                        Tracked experiments and model versions using MLflow.
+                    </li>
+
+                    <li>
+                        Collaborated with engineering teams to
+                        productionize Machine Learning models.
+                    </li>
+
+                    <li>
+                        Optimized inference latency for real-time predictions.
+                    </li>
+
+                    <li>
+                        Researched and adapted state-of-the-art research
+                        into practical business solutions.
+                    </li>
+
+                </ul>
+
+
+                <h5>
+                    Business Impact
+                </h5>
+
+                <ul>
+
+                    <li>
+                        Reduced insurance claim processing time by 40%.
+                    </li>
+
+                    <li>
+                        Improved operational efficiency through automation.
+                    </li>
+
+                    <li>
+                        Enabled real-time claim triaging.
+                    </li>
+
+                </ul>
+
+
+                <h5>
+                    Technologies
+                </h5>
+
+                <p>
+                    Python • BERT • Transformers • TensorFlow • PyTorch •
+                    Azure Databricks • MLflow • SQL • Pandas • NumPy •
+                    Scikit-Learn • Git
+                </p>
+
+            </div>
+
+
+            <!-- PROJECT 2 -->
+
+            <div class="project">
+
+                <h4>
+                    Predictive Guardrails & Wagering Personalization
+                </h4>
+
+                <div class="project-meta">
+
+                    <strong>Client:</strong>
+                    Ladbrokes, Brisbane
+
+                    &nbsp; | &nbsp;
+
+                    <strong>Role:</strong>
+                    Machine Learning Engineer
+
+                    &nbsp; | &nbsp;
+
+                    <strong>Duration:</strong>
+                    Aug 2022 - Jan 2024
+
+                </div>
+
+
+                <h5>
+                    Project Overview
+                </h5>
+
+                <p>
+                    Engineered a high-throughput Machine Learning ecosystem
+                    for monitoring more than 1 billion annual transactions,
+                    enabling real-time behavioral analysis and personalized
+                    user engagement.
+                </p>
+
+
+                <h5>
+                    Key Responsibilities
+                </h5>
+
+                <ul>
+
+                    <li>
+                        Developed reusable Python libraries for feature
+                        engineering and model evaluation.
+                    </li>
+
+                    <li>
+                        Improved ML prototyping speed by 30% through
+                        modular framework design.
+                    </li>
+
+                    <li>
+                        Architected automated ML pipelines using
+                        Python and Azure Databricks.
+                    </li>
+
+                    <li>
+                        Integrated automated hyperparameter tuning workflows.
+                    </li>
+
+                    <li>
+                        Built scalable feature extraction pipelines
+                        for large-scale datasets.
+                    </li>
+
+                    <li>
+                        Reduced feature processing time by 40%.
+                    </li>
+
+                    <li>
+                        Implemented Deep Learning models using
+                        TensorFlow and PyTorch.
+                    </li>
+
+                    <li>
+                        Applied gradient clipping and learning-rate
+                        scheduling to improve convergence stability.
+                    </li>
+
+                    <li>
+                        Built testing frameworks including unit testing,
+                        bias detection and statistical validation.
+                    </li>
+
+                    <li>
+                        Collaborated with cross-functional teams to
+                        deploy production-ready ML solutions.
+                    </li>
+
+                </ul>
+
+
+                <h5>
+                    Business Impact
+                </h5>
+
+                <ul>
+
+                    <li>
+                        Processed over 1 billion annual transactions.
+                    </li>
+
+                    <li>
+                        Improved model accuracy by 15%.
+                    </li>
+
+                    <li>
+                        Reduced processing time by 40%.
+                    </li>
+
+                    <li>
+                        Accelerated ML development cycles by 30%.
+                    </li>
+
+                </ul>
+
+
+                <h5>
+                    Technologies
+                </h5>
+
+                <p>
+                    Python • TensorFlow • PyTorch • Azure Databricks •
+                    MLflow • SQL • Git • Scikit-Learn • Pandas • NumPy
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==============================
+     SKILLS
+============================== -->
+
+<section id="skills">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>TECHNICAL EXPERTISE</span>
+
+            <h2>
+                Skills & Technologies
+            </h2>
+
+        </div>
+
+
+        <div class="skills-grid">
+
+
+            <div class="skill-card">
+
+                <h3>
+                    Programming
+                </h3>
+
+                <div class="tags">
+
+                    <span class="tag">Python</span>
+                    <span class="tag">SQL</span>
+
+                </div>
+
+            </div>
+
+
+            <div class="skill-card">
+
+                <h3>
+                    Machine Learning
+                </h3>
+
+                <div class="tags">
+
+                    <span class="tag">Regression</span>
+                    <span class="tag">Classification</span>
+                    <span class="tag">Clustering</span>
+                    <span class="tag">Time Series</span>
+                    <span class="tag">NLP</span>
+                    <span class="tag">Scikit-Learn</span>
+
+                </div>
+
+            </div>
+
+
+            <div class="skill-card">
+
+                <h3>
+                    Deep Learning
+                </h3>
+
+                <div class="tags">
+
+                    <span class="tag">TensorFlow</span>
+                    <span class="tag">PyTorch</span>
+                    <span class="tag">BERT</span>
+                    <span class="tag">Transformers</span>
+                    <span class="tag">Neural Networks</span>
+
+                </div>
+
+            </div>
+
+
+            <div class="skill-card">
+
+                <h3>
+                    MLOps & Deployment
+                </h3>
+
+                <div class="tags">
+
+                    <span class="tag">MLflow</span>
+                    <span class="tag">Git</span>
+                    <span class="tag">GitHub</span>
+                    <span class="tag">CI/CD</span>
+                    <span class="tag">Flask</span>
+                    <span class="tag">Streamlit</span>
+
+                </div>
+
+            </div>
+
+
+            <div class="skill-card">
+
+                <h3>
+                    Cloud & Data
+                </h3>
+
+                <div class="tags">
+
+                    <span class="tag">Azure Databricks</span>
+                    <span class="tag">AWS S3</span>
+                    <span class="tag">AWS SageMaker</span>
+
+                </div>
+
+            </div>
+
+
+            <div class="skill-card">
+
+                <h3>
+                    Analytics & Visualization
+                </h3>
+
+                <div class="tags">
+
+                    <span class="tag">Power BI</span>
+                    <span class="tag">Tableau</span>
+                    <span class="tag">Matplotlib</span>
+                    <span class="tag">Seaborn</span>
+                    <span class="tag">Plotly</span>
+                    <span class="tag">EDA</span>
+                    <span class="tag">Hypothesis Testing</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==============================
+     EDUCATION
+============================== -->
+
+<section id="education">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>EDUCATION</span>
+
+            <h2>
+                Academic Background
+            </h2>
+
+        </div>
+
+
+        <div class="education-card">
+
+            <h3>
+                DRBCC Hindu College, Chennai
+            </h3>
+
+            <p>
+                Bachelor of Science (Statistics)
+            </p>
+
+            <p>
+                April 2022
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==============================
+     CONTACT
+============================== -->
+
+<section id="contact" class="contact">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>GET IN TOUCH</span>
+
+            <h2>
+                Let's Connect
+            </h2>
+
+            <p>
+                Interested in Machine Learning, Data Science and
+                AI opportunities.
+            </p>
+
+        </div>
+
+
+        <div class="contact-grid">
+
+
+            <div class="contact-card">
+
+                <h3>
+                    Email
+                </h3>
+
+                <p>
+                    keerthana.palliakal@gmail.com
+                </p>
+
+            </div>
+
+
+            <div class="contact-card">
+
+                <h3>
+                    Phone
+                </h3>
+
+                <p>
+                    +91-6382917789
+                </p>
+
+            </div>
+
+
+            <div class="contact-card">
+
+                <h3>
+                    Location
+                </h3>
+
+                <p>
+                    Chennai, Tamil Nadu, India
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    © 2026 Keerthana P · Data Scientist & Machine Learning Engineer
+
+</footer>
+
 
 </body>
 
